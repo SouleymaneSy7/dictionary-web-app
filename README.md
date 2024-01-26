@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{demo-link.com}" target="_blank">
+    <a href="https://dictionary-web-app-seven-olive.vercel.app/" target="_blank">
       Demo URL
     </a>
     <span> | </span>
