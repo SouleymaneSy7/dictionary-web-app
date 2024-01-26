@@ -50,7 +50,7 @@ Welcome to the Dictionary Web App project! This project is a Vue.js based web ap
 
 _Figure 1: The homepage provides a simple and elegant search interface for users._
 
-![Word Definition](screenshots/Desktop-results.png)
+![Word Definition](screenshots/desktop-results.png)
 
 _Figure 2: Users can view detailed word definitions with examples and additional information._
 
