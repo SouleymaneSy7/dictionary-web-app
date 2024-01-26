@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --primary-clr: hsl(346, 75%, 63%);
+  --primary-accent-clr: hsla(346, 75%, 63%, 0.3);
+
+  /* Light Theme Colors */
+  --light-theme-text-clr: hsl(208, 18%, 21%);
+  --light-theme-sub-text-clr: hsl(189, 5%, 51%);
+  --light-theme-body-bg-clr: hsl(0, 0%, 100%);
+  --light-theme-input-clr: hsl(0, 0%, 96%);
+
+  /* Dark Theme Colors */
+  --dark-theme-text-clr: hsl(0, 0%, 100%);
+  --dark-theme-sub-text-clr: hsl(240, 1%, 75%);
+  --dark-theme-body-bg-clr: hsl(240, 13%, 25%);
+  --dark-theme-input-clr: hsl(240, 14%, 30%);
+
+  /* Font-family */
+  --font-family: "Lekton", sans-serif;
+
+  /* Font-weight */
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /* Font-Size */
+  --fs-body: clamp(1rem, 1rem + 0vw, 1rem);
+  --fs-input: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-title: clamp(2.625rem, 2.3207rem + 1.5217vw, 3.5rem);
+  --fs-sub-title: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-sub-heading: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+  --fs-link: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+}
+
+/* Scrollbar Customs */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100vmax;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-clr);
+  border-radius: 100vmax;
+}
+
+body {
+  @apply font-lekton font-bold text-fs-body bg-light_theme_body_bg_clr dark:bg-dark_theme_body_bg_clr dark:text-dark_theme_text_clr;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 6.0625rem auto 6rem;
+}
+
+/* Loading Spinner  */
+
+.loading {
+  display: inline-block;
+
+  width: 4.5rem;
+  height: 4.5rem;
+
+  border-left-color: var(--primary-clr);
+  border-top-color: var(--primary-accent-clr);
+
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+  border-width: 0.5rem;
+
+  border-radius: 50%;
+
+  animation: loader 1000ms linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
